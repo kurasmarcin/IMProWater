@@ -1,0 +1,36 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMProWater.HomePage"
+             BackgroundColor="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="tlo.jpg" Aspect="AspectFill" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="2" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Spacing="10" Margin="0, 20, 0, 40" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <Image Source="logo.jpg" WidthRequest="100" HeightRequest="100"/>
+            <Label Text="IMProWater" FontSize="40" VerticalOptions="Center" TextColor="Black"/>
+        </StackLayout>
+
+        <Button Text="Sekcje" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 0, 20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="150" WidthRequest="300" Clicked="OnSectionsButtonClicked"/>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Ustawienia" FontSize="20" Grid.Column="0" HeightRequest="150" WidthRequest="150" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0" Clicked="OnSettingsButtonClicked"/>
+            <Button Text="Status" FontSize="20" Grid.Column="1" HeightRequest="150" WidthRequest="150" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,0" Clicked="OnStatusButtonClicked"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
